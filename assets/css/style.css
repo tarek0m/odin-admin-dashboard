@@ -1,0 +1,296 @@
+:root {
+  --sky-100: #e0f2fe;
+  --sky-600: #0284c7;
+  --sky-700: #0369a1;
+  --sky-900: #0c4a6e;
+  --slate-100: #f1f5f9;
+  --slate-200: #cbd5e1;
+  --shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+  --padding-25: 25px;
+  --padding-50: 50px;
+  --large-font: 22px;
+  --medium-font: 18px;
+  --small-font: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+img {
+  height: 30px;
+  color: inherit;
+}
+
+button {
+  color: white;
+  background-color: var(--sky-700);
+  font-family: inherit;
+}
+
+hr {
+  opacity: 0.5;
+  width: 85%;
+  margin: 20px auto;
+}
+
+.info {
+  color: grey;
+  size: 14px;
+  font-weight: 200;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 15vh 80vh 5vh;
+  background-color: white;
+}
+
+.sidebar {
+  grid-area: 1 / 1 / 3 / 2;
+  background-color: var(--sky-600);
+  color: white;
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas:
+    'logo'
+    'section-1'
+    'section-2';
+  gap: 75px;
+  padding: var(--padding-25);
+}
+
+.sidebar > div {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 25px;
+}
+
+.sidebar img {
+  filter: invert(1);
+  margin-right: 10px;
+}
+
+.sidebar > .dashboard > img {
+  height: 2em;
+}
+
+.sidebar > .dashboard,
+.sidebar > div > h2 {
+  display: flex;
+  align-items: center;
+  font-size: var(--large-font);
+}
+
+.header {
+  grid-area: 1 / 2 / 2 / 3;
+  z-index: 3;
+  box-shadow: var(--shadow);
+  padding: 0 var(--padding-50);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: repeat(2, max-content);
+  gap: 25px;
+  align-content: center;
+  align-items: center;
+}
+
+.header .search-container {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header .search-container .search-input {
+  flex: 1;
+  background-color: var(--slate-200);
+  border: 0px;
+  border-radius: 50px;
+  padding: 8px 14px;
+  font-family: inherit;
+}
+
+.header .search-container label {
+  height: 30px;
+}
+
+.header .search-container img {
+  height: 100%;
+}
+
+.header .information {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3vw;
+  gap: 25px;
+}
+
+.header .information img:not(:first-child) {
+  height: 50px;
+  margin-left: 3vw;
+}
+
+.header .information p {
+  font-size: var(--medium-font);
+}
+
+.header .hi-container {
+  grid-area: 2 / 1 / 3 / 2;
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-template-areas:
+    'img hi'
+    'img name';
+  align-items: center;
+  gap: 5px 20px;
+}
+
+.header .hi-container img {
+  grid-area: img;
+  height: 75px;
+}
+
+.header .hi-container .hi {
+  grid-area: hi;
+  font-size: var(--medium-font);
+  align-self: end;
+}
+
+.header .hi-container .name {
+  grid-area: name;
+  font-size: var(--large-font);
+  align-self: start;
+}
+
+.header .buttons {
+  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  justify-content: center;
+  margin-right: 3vw;
+  gap: 25px;
+}
+
+.header .buttons button {
+  border: 0px;
+  padding: 10px var(--padding-25);
+  border-radius: 50px;
+}
+
+.main {
+  grid-area: 2 / 2 / 3 / 3;
+  background-color: var(--slate-100);
+  padding: var(--padding-25);
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 50px;
+}
+
+.main .projects {
+  grid-area: 1 / 1 / 3 / 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content;
+  gap: 20px;
+}
+
+.main .projects h2 {
+  grid-column: span 2;
+}
+.main .projects .project-card {
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: var(--padding-25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border-left: 10px solid #ffc400;
+  gap: 10px;
+}
+
+.main .projects .project-card .project-actions {
+  margin-top: auto;
+  align-self: end;
+  display: flex;
+  gap: 2em;
+}
+
+.main .projects .project-card .project-actions img {
+  height: 1.5em;
+}
+
+.main .announcements {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.main .announcements .announcement-card {
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: var(--padding-25);
+  border-radius: 10px;
+}
+
+.main .announcements .announcement-name {
+  margin-bottom: 10px;
+}
+
+.announcement-info {
+  height: 7em;
+}
+
+.main .trending {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.main .trending .trend-cards-container {
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: var(--shadow);
+  padding: var(--padding-25);
+  border-radius: 10px;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 25px;
+}
+
+.main .trending .trend-cards-container .trend-card {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-template-areas:
+    'img handel'
+    'img trend-info';
+  align-items: center;
+  gap: 5px 20px;
+}
+
+.main .trending .trend-cards-container .trend-card img {
+  grid-area: img;
+  height: 50px;
+}
+
+.main .trending .trend-cards-container .trend-card .handel {
+  align-self: end;
+}
+
+.main .trending .trend-cards-container .trend-card .trend-info {
+  align-self: start;
+}
+.footer {
+  grid-area: 3 / 1 / 4 / 3;
+  background-color: var(--sky-900);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
