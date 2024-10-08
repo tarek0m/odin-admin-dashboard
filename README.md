@@ -23,33 +23,9 @@ git clone https://github.com/tarek0m/odin-admin-dashboard.git
 
 2. Open the `index.html` file in your browser to view the dashboard.
 
-## Project Structure
+## Screenshot
 
-```
-├── assets
-│   ├── css
-│   │   ├── reset.css
-│   │   └── style.css
-│   ├── images
-│   │   ├── view-dashboard.svg
-│   │   ├── home.svg
-│   │   ├── account-box-outline.svg
-│   │   ├── message-reply.svg
-│   │   ├── history.svg
-│   │   ├── file-multiple.svg
-│   │   ├── account-group.svg
-│   │   ├── cog.svg
-│   │   ├── help.svg
-│   │   ├── shield-check.svg
-│   │   ├── magnify.svg
-│   │   ├── bell-outline.svg
-│   │   ├── profile.svg
-│   │   ├── star-plus-outline.svg
-│   │   ├── eye-plus-outline.svg
-│   │   └── merge.svg
-├── index.html
-└── README.md
-```
+![Admin Dashboard Screenshot](assets/design/Screenshot.png)
 
 ## Acknowledgements
 
